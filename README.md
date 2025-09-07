@@ -108,22 +108,22 @@ Make sure the following are installed:
 #### 🔹 Public Repository (HTTPS)
 
 ```bash
-git clone https://github.com/<your-username>/shanakht-dashboard-v1.git
-cd shanakht-dashboard-v1
+git clone https://github.com/TalhaRamzan-Dev/Shanakht-Dashboard.git
+cd Shanakht-Dashboard
 ```
 
 #### 🔹 Private Repository (HTTPS with credentials)
 
 ```bash
-git clone https://<your-username>@github.com/<your-username>/shanakht-dashboard-v1.git
-cd shanakht-dashboard-v1
+git clone https://TalhaRamzan-Dev@github.com/TalhaRamzan-Dev/Shanakht-Dashboard.git
+cd shanakht-dashboard
 ```
 
 #### 🔹 SSH (recommended for developers)
 
 ```bash
-git clone git@github.com:<your-username>/shanakht-dashboard-v1.git
-cd shanakht-dashboard-v1
+git clone git@github.com:TalhaRamzan-Dev/Shanakht-Dashboard.git
+cd shanakht-dashboard
 ```
 
 ---
