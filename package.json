@@ -1,0 +1,23 @@
+{
+  "name": "dashboard-desktop-app",
+  "version": "1.0.0",
+  "description": "Dashboard Desktop Application with Electron, React, and Flask",
+  "main": "Electron/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\" \"wait-on http://localhost:3000 && npm run start:electron\"",
+    "start:backend": "cd Backend && python app.py",
+    "start:frontend": "cd Frontend && npm run dev",
+    "start:electron": "cd Electron && npm start",
+    "build:frontend": "cd Frontend && npm run build",
+    "build:electron": "cd Electron && npm run build:win",
+    "build:exe": "npm run build:frontend && npm run build:electron",
+    "install-all": "npm install && cd Frontend && npm install && cd ../Electron && npm install"
+  },
+  "keywords": ["electron", "react", "flask", "desktop", "dashboard"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
+  }
+}

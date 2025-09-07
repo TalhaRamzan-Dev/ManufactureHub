@@ -1,0 +1,434 @@
+# =============================================================================
+# SHANAKHT DASHBOARD V1 - GITIGNORE
+# =============================================================================
+# This file ensures only Backend and Frontend source code is tracked
+# while ignoring sensitive files, build artifacts, and Electron components
+
+# =============================================================================
+# SENSITIVE FILES & CONFIGURATION
+# =============================================================================
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+Backend/instance/production.db
+Backend/instance/*.db
+
+# Log files
+*.log
+app.log
+Backend/app.log
+Frontend/app.log
+Electron/app.log
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.ini
+secrets.json
+credentials.json
+
+# API keys and tokens
+api_keys.txt
+tokens.txt
+.secrets
+
+# =============================================================================
+# ELECTRON BUILD ARTIFACTS & DISTRIBUTION
+# =============================================================================
+
+# Electron build output
+Electron/dist/
+Electron/build/
+Electron/out/
+Electron/win-unpacked/
+Electron/mac/
+Electron/linux/
+
+# Electron builder cache
+Electron/node_modules/
+Electron/package-lock.json
+
+# Electron main process
+Electron/main.js
+Electron/package.json
+
+# =============================================================================
+# PYTHON BACKEND - BUILD ARTIFACTS
+# =============================================================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (if used)
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# =============================================================================
+# NODE.JS FRONTEND - BUILD ARTIFACTS
+# =============================================================================
+
+# Dependencies
+Frontend/node_modules/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# =============================================================================
+# BUILD & DISTRIBUTION FOLDERS
+# =============================================================================
+
+# Build outputs
+build/
+dist/
+out/
+
+# Frontend build
+Frontend/build/
+Frontend/dist/
+
+# =============================================================================
+# UPLOADED FILES & MEDIA
+# =============================================================================
+
+# Uploaded files
+Backend/instance/uploads/
+uploads/
+client_orders/
+design_images/
+
+# Media files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.svg
+*.ico
+
+# =============================================================================
+# DEVELOPMENT TOOLS & IDEs
+# =============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# OPERATING SYSTEM FILES
+# =============================================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# PROJECT SPECIFIC IGNORES
+# =============================================================================
+
+# Batch files
+*.bat
+Shankh Dashboard.bat
+
+# Package files
+package-lock.json
+yarn.lock
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =============================================================================
+# KEEP THESE FILES (EXPLICITLY TRACKED)
+# =============================================================================
+
+# Source code
+!Backend/**/*.py
+!Frontend/src/**/*.tsx
+!Frontend/src/**/*.ts
+!Frontend/src/**/*.css
+!Frontend/src/**/*.json
+
+# Configuration files
+!Backend/requirements.txt
+!Frontend/package.json
+!Frontend/vite.config.ts
+!Frontend/tailwind.config.js
+!Frontend/postcss.config.js
+!Frontend/tsconfig.json
+
+# Documentation
+!README.md
+!requirements.txt
+!*.md
+
+# Git
+!.gitignore
+!.gitattributes
