@@ -1,263 +1,97 @@
 # Shanakht Dashboard
 
-A comprehensive **production management system** built with modern web technologies.
-It is designed for manufacturing businesses to streamline the management of clients, orders, production lots, workers, inventory, and financial records in a single unified platform.
+A modern web-based production management system for manufacturing businesses. Built with Flask and React, it streamlines client, order, production, worker, inventory, and financial management in one platform.
 
----
+## Features
 
-## 🚀 Features
+- **Client Management**: Track client details, contacts, and business information.
+- **Order Management**: Create and monitor orders with design specs, quantities, deadlines, and status (Pending, In Progress, Completed, Cancelled).
+- **Production Lots**: Manage production batches, track progress, costs, and timelines.
+- **Worker Management**: Assign workers to lots, track skills, hourly rates, and productivity.
+- **Inventory Management**: Monitor material usage, costs, and suppliers per lot.
+- **Financials**: Log expenses, client payments, and balances with a daily transaction log.
+- **Analytics Dashboard**: Visualize revenue, expenses, worker productivity, and lot progress.
+- **Data Tools**: Import/export CSV, search, filter, and validate data.
+- **UI**: Responsive design with dark theme, data tables, forms, and notifications.
 
-### Core Modules
-
-#### 1. **Client Management**
-
-* Maintain a complete client database with contact information
-* Track business names and shop addresses
-* Manage emails and phone numbers
-* Add, edit, and update clients
-
-#### 2. **Order Management**
-
-* Create and track client orders
-* Add design specifications, materials, and colors
-* Manage unit quantities and deadlines
-* Upload and store design images
-* Track order status (Pending, In Progress, Completed, Cancelled)
-* Estimate and track costs
-
-#### 3. **Production Lot Management**
-
-* Create production batches linked to orders
-* Track lot status (Pending, In Progress, Completed, On Hold)
-* Manage start and end dates
-* Monitor progress and production stages
-* Calculate costs and add notes
-
-#### 4. **Worker Management**
-
-* Maintain a worker database with skill sets
-* Manage hourly rates
-* Assign workers to production lots
-* Track productivity (units produced, hours worked)
-* Analyze worker performance
-
-#### 5. **Inventory Management**
-
-* Track material usage per lot
-* Manage quantities, unit costs, and suppliers
-* Monitor date-based usage
-* Calculate lot-wise costs
-
-#### 6. **Financial Management**
-
-* Track all expenses per lot
-* Manage client payments and balances (ledger)
-* Maintain a daily financial transaction log (Day Book)
-* Generate invoice numbers
-* Track payment methods and balances
-
----
-
-### Advanced Features
-
-* 📊 **Analytics Dashboard** with revenue vs expenses, worker productivity, and lot progress
-* 🔍 **Data Management** with import/export (CSV), search & filter, and validation
-* 🎨 **User Interface** with a modern responsive design, dark theme, data tables, form validation, and notifications
-
----
-
-## 🏗️ Architecture
-
-### Technology Stack
-
-#### Backend (Flask API)
-
-* **Framework**: Flask 2.3.3
-* **Database**: SQLite with SQLAlchemy ORM
-* **CORS**: Flask-CORS for cross-origin requests
-* **PDF Generation**: fpdf2 for reports
-* **File Handling**: Pillow for images
-
-#### Frontend (React + TypeScript)
-
-* **Framework**: React 18.3.1 with TypeScript
-* **Build Tool**: Vite 6.3.5
-* **UI Components**: Radix UI primitives
-* **Styling**: Tailwind CSS 4.1.12
-* **Charts**: Recharts for analytics
-* **Forms**: React Hook Form
-* **Icons**: Lucide React
-
----
-
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
+- Python 3.8+ (3.11+ recommended)
+- Node.js 16.0+ (18.0+ recommended)
+- npm 9.0+
+- Git
 
-Make sure the following are installed:
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TalhaRamzan-Dev/Shanakht-Dashboard.git
+   cd Shanakht-Dashboard
+   ```
+2. Install backend dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Install frontend dependencies:
+   ```bash
+   cd Frontend
+   npm install
+   ```
 
-* **Python 3.8+** (Python 3.11+ recommended)
-* **Node.js 16.0+** (Node.js 18.0+ recommended)
-* **npm 9.0+**
-* **Git**
-
----
-
-### Clone the Repository
-
-#### 🔹 Public Repository (HTTPS)
-
-```bash
-git clone https://github.com/TalhaRamzan-Dev/Shanakht-Dashboard.git
-cd Shanakht-Dashboard
-```
-
-#### 🔹 Private Repository (HTTPS with credentials)
-
-```bash
-git clone https://TalhaRamzan-Dev@github.com/TalhaRamzan-Dev/Shanakht-Dashboard.git
-cd shanakht-dashboard
-```
-
-#### 🔹 SSH (recommended for developers)
-
-```bash
-git clone git@github.com:TalhaRamzan-Dev/Shanakht-Dashboard.git
-cd shanakht-dashboard
-```
-
----
-
-### Install Dependencies
-
-#### 1. Backend (Flask API)
-
-```bash
-pip install -r requirements.txt
-```
-
-#### 2. Frontend (React + TypeScript)
-
-```bash
-cd Frontend
-npm install
-```
-
----
-
-### Build the Frontend
-
-```bash
-npm run build
-```
-
----
-
-## 🚀 Usage
+## Usage
 
 ### Development Mode
-
-#### 1. Start the Backend (Flask API)
-
-```bash
-cd Backend
-python app.py
-```
-
-Runs on `http://localhost:5000`
-
-#### 2. Start the Frontend (React App)
-
-```bash
-cd Frontend
-npm run dev
-```
-
-Runs on `http://localhost:3000`
-
----
+1. Start the backend:
+   ```bash
+   cd Backend
+   python app.py
+   ```
+   Runs on `http://localhost:5000`
+2. Start the frontend:
+   ```bash
+   cd Frontend
+   npm run dev
+   ```
+   Runs on `http://localhost:3000`
 
 ### Production Mode
-
 1. Build the frontend:
-
    ```bash
    cd Frontend
    npm run build
    ```
-2. Deploy the `Frontend/build/` folder to a web server
-3. Deploy the Flask backend to your Python hosting environment
+2. Deploy `Frontend/build/` to a static host (e.g., Netlify, Vercel).
+3. Deploy the Flask backend to a Python server (e.g., Gunicorn, Heroku).
 
----
+## Technical Details
 
-## 📊 Database Schema
+- **Backend**: Flask 2.3.3, SQLite (SQLAlchemy), Flask-CORS, fpdf2 (PDFs), Pillow (images).
+- **Frontend**: React 18.3.1, TypeScript, Vite 6.3.5, Tailwind CSS, Recharts, React Hook Form.
+- **Database**: Tables for clients, orders, lots, workers, inventory, expenses, and financials.
+- **Security**: Input validation, SQL injection protection, secure file uploads, CORS.
 
-* **client** → Client details
-* **client\_orders** → Orders placed by clients
-* **lot** → Production batches linked to orders
-* **worker** → Worker details and rates
-* **lot\_worker** → Worker assignments
-* **inventory** → Material usage per lot
-* **lot\_expenses** → Lot-wise expenses
-* **client\_ledger** → Client payments & balances
-* **day\_book** → Complete financial transaction log
+## Testing
 
----
+- Backend: `pytest Backend/tests/`
+- Frontend: `cd Frontend && npm test`
 
-## 🔧 Configuration
+## Configuration
 
-* **Backend**: Configure database and file paths in `Backend/config.py`
-* **Frontend**: API endpoints in `Frontend/src/services/api.ts`
+- Backend: Edit database/file paths in `Backend/config.py`.
+- Frontend: Update API endpoints in `Frontend/src/services/api.ts`.
 
----
+## Deployment
 
-## 🧪 Testing
+- **Frontend**: Host `Frontend/build/` on Netlify, Vercel, or Nginx.
+- **Backend**: Deploy Flask API with Gunicorn + Nginx or a cloud platform (e.g., Heroku).
 
-#### Backend Tests
+## Contributing
 
-```bash
-pytest Backend/tests/
-```
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Add changes and tests.
+4. Submit a pull request with a clear description.
 
-#### Frontend Tests
+## Support
 
-```bash
-cd Frontend
-npm test
-```
-
----
-
-## 📦 Deployment
-
-* **Frontend** → Deploy `Frontend/build/` to any static hosting service (Netlify, Vercel, Nginx, Apache)
-* **Backend** → Deploy Flask API to a Python server (Gunicorn + Nginx, Heroku, or any cloud hosting)
-
----
-
-## 🔒 Security Features
-
-* Input validation across all forms
-* SQL injection protection via SQLAlchemy
-* Secure file uploads
-* CORS configuration for API security
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes and add tests
-4. Submit a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the **ISC License** – see the LICENSE file for details.
-
----
-
-**Shanakht Dashboard** – Streamlining production management for modern manufacturing businesses.
-
+For issues, submit a bug report or feature request on the [GitHub repository](https://github.com/TalhaRamzan-Dev/Shanakht-Dashboard).
